@@ -1,0 +1,41 @@
+package codingProblems;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class twoSum {
+    public static void main (String[] args) { 
+        // Basic Case
+        System.out.println(twoSumSolution(List.of(2,7,11,15), 9));
+        // Negative Numbers
+        System.out.println(twoSumSolution(List.of(-3,4,3,90), 0));
+        // Duplicate Values
+        System.out.println(twoSumSolution(List.of(3,3), 6));
+        // Larger Array
+        System.out.println(twoSumSolution(List.of(1,5,7,2,8), 7));
+        // Mixed Positive Negative Numbers
+        System.out.println(twoSumSolution(List.of(0,4,3,0), 0));
+    }
+
+    public static List<Integer> twoSumSolution(List<Integer> nums, int target) {
+        List<Integer> result = new ArrayList<>();
+        Map<Integer, Integer> indexMap = new HashMap<>();
+
+        for (int i = 0; i < nums.size(); i++) {
+            int diff = target - nums.get(i);
+
+            if (indexMap.containsKey(diff)) {
+                result.add(indexMap.get(diff));
+                result.add(i);
+                return result;
+            }
+
+            indexMap.put(nums.get(i), i);
+        }
+
+        return result;
+    }
+
+}
