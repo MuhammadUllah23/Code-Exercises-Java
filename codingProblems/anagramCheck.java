@@ -1,5 +1,6 @@
 package codingProblems;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -32,5 +33,23 @@ public class anagramCheck {
         }
 
         return freq1.values().stream().allMatch(v -> v == 0);
+    }
+
+    public static boolean isAnagram2(String s, String t) {
+        if(s.length() != s.length()) return false;
+
+        char[] sArr = s.toCharArray();
+        Arrays.sort(sArr);
+        String sString = String.copyValueOf(sArr);
+
+        char[] tArr = t.toCharArray();
+        Arrays.sort(tArr);
+        String tString = String.copyValueOf(tArr);
+
+        if (sString.equals(tString)) {
+            return true;
+        }
+
+        return false;
     }
 }
