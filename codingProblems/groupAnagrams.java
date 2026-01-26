@@ -31,4 +31,22 @@ public class groupAnagrams {
         return answer;
     }
 
+    public List<List<String>> groupAnagramsNeetCode(String[] strs) {
+        HashMap<String, List<String>> groups = new HashMap();
+        List<List<String>> anagramGroups = new ArrayList<>();
+
+        for(String str : strs) {
+            char[] arr = str.toCharArray();
+            Arrays.sort(arr);
+            String sortedStr = String.valueOf(arr);
+
+            groups.computeIfAbsent(sortedStr, k -> new ArrayList<>()).add(str);
+        }
+
+        groups.forEach((key, val) -> anagramGroups.add(val));
+        return anagramGroups;
+        
+        
+    }
+
 }
