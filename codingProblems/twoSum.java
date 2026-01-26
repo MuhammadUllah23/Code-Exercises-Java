@@ -17,6 +17,18 @@ public class twoSum {
         System.out.println(twoSumSolution(List.of(1,5,7,2,8), 7));
         // Mixed Positive Negative Numbers
         System.out.println(twoSumSolution(List.of(0,4,3,0), 0));
+
+        System.out.println("twoSumPointers: ");
+        // Basic Case
+        System.out.println(twoSumPointers(new int[]{2,7,11,15}, 9));
+        // Negative Numbers
+        System.out.println(twoSumPointers(new int[]{-3,4,3,90}, 0));
+        // Duplicate Values
+        System.out.println(twoSumPointers(new int[]{3,3}, 6));
+        // Larger Array
+        System.out.println(twoSumPointers(new int[]{1,5,7,2,8}, 7));
+        // Mixed Positive Negative Numbers
+        System.out.println(twoSumPointers(new int[]{0,4,3,0}, 0));
     }
 
     public static List<Integer> twoSumSolution(List<Integer> nums, int target) {
@@ -48,6 +60,25 @@ public class twoSum {
                 return new int[]{map.get(diff), i};
             } else {
                 map.put(nums[i], i);
+            }
+        }
+
+        return new int[]{};
+    }
+
+    public static int[] twoSumPointers(int[] numbers, int target) {
+        int i = 0;
+        int j = numbers.length - 1;
+
+        while (i < j) {
+            int sum = numbers[i] + numbers[j];
+
+            if (sum == target) {
+                return new int[] {i, j};
+            } else if(sum < target) {
+                i++;
+            } else if(sum > target) {
+                j--;
             }
         }
 
