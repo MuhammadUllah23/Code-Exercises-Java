@@ -4,6 +4,9 @@ public class validPalindrome {
         public static void main (String[] args) { 
         System.out.println(isPalindrome("Was it a car or a cat I saw?"));
         System.out.println(isPalindrome("tab a cat"));
+
+        System.out.println(isPalindrome("Was it a car or a cat I saw?"));
+        System.out.println(isPalindrome("tab a cat"));
     }
 
     public static boolean isPalindrome(String s) {
@@ -24,6 +27,12 @@ public class validPalindrome {
         
         // once two pointers is finished then return true
         return true;
+    }
+
+    public static boolean isPalindrome2(String s) {
+        String str = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        String reversed = new StringBuilder(str).reverse().toString();
+        return str.equals(reversed);
     }
 
 }
