@@ -7,15 +7,15 @@ import java.util.List;
 public class threeSum {
         public static void main (String[] args) { 
         // Basic Case
-        // System.out.println(threeSumSolution(new int[]{-1,0,1,2,-1,-4}));
-        // // Negative Numbers
-        // System.out.println(threeSumSolution(new int[]{0,1,1}));
-        // // Duplicate Values
-        // System.out.println(threeSumSolution(new int[]{1,-1,-1,0}));
+        System.out.println(threeSumSolution(new int[]{-1,0,1,2,-1,-4}));
+        // Negative Numbers
+        System.out.println(threeSumSolution(new int[]{0,1,1}));
+        // Duplicate Values
+        System.out.println(threeSumSolution(new int[]{1,-1,-1,0}));
 
         System.out.println(threeSumSolution(new int[]{-2,0,1,1,2}));
     }
-    // -2, 0, 1, 1, 2
+
     public static List<List<Integer>> threeSumSolution(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
 
@@ -32,18 +32,9 @@ public class threeSum {
 
             int left = i + 1;
             int right = nums.length - 1;
-            System.out.println("i: ");
-            System.out.println(i);
 
             while(left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
-                System.out.println("left: ");
-                System.out.println(nums[left]);           
-                System.out.println("right: ");
-                System.out.println(nums[right]);
-
-                System.out.println("sum: ");
-                System.out.println(sum);
 
                 // if sum is 0 then add to result and shift left/right
                 // if sum is greater than 0 then shift left

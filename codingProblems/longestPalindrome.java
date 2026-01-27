@@ -1,7 +1,5 @@
 package codingProblems;
 
-import java.util.List;
-
 public class longestPalindrome {
     public static void main(String[] args) {
         System.out.println(longestPalindromeSolution("babad"));

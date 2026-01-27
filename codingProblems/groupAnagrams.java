@@ -32,7 +32,7 @@ public class groupAnagrams {
     }
 
     public List<List<String>> groupAnagramsNeetCode(String[] strs) {
-        HashMap<String, List<String>> groups = new HashMap();
+        HashMap<String, List<String>> groups = new HashMap<String, List<String>>();
         List<List<String>> anagramGroups = new ArrayList<>();
 
         for(String str : strs) {

@@ -1,7 +1,5 @@
 package codingProblems;
 
-import java.util.List;
-
 public class rotateString {
     public static void main(String[] args) {
         System.out.println(rotateStringSolution("abcde","cdeab"));

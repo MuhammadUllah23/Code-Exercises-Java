@@ -1,21 +1,20 @@
 package codingProblems;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 
 public class positiveMeetingsMax {
         public static void main (String[] args) { 
         // Basic Case
-        System.out.println(positiveMeetingsMaxSolution(new ArrayList(List.of(3))));
+        System.out.println(positiveMeetingsMaxSolution(new ArrayList<Integer>(List.of(3))));
         // Negative Numbers
-        System.out.println(positiveMeetingsMaxSolution(new ArrayList(List.of(-3,4,3,90))));
+        System.out.println(positiveMeetingsMaxSolution(new ArrayList<Integer>(List.of(-3,4,3,90))));
         // Duplicate Values
-        System.out.println(positiveMeetingsMaxSolution(new ArrayList(List.of(3))));
+        System.out.println(positiveMeetingsMaxSolution(new ArrayList<Integer>(List.of(3))));
         // Larger Array
-        System.out.println(positiveMeetingsMaxSolution(new ArrayList(List.of(1,5,7,2,8))));
+        System.out.println(positiveMeetingsMaxSolution(new ArrayList<Integer>(List.of(1,5,7,2,8))));
         // Mixed Positive Negative Numbers
-        System.out.println(positiveMeetingsMaxSolution(new ArrayList(List.of(0,4,3,0))));
+        System.out.println(positiveMeetingsMaxSolution(new ArrayList<Integer>(List.of(0,4,3,0))));
     }
 
     public static int positiveMeetingsMaxSolution(List<Integer> nums) {

@@ -51,7 +51,7 @@ public class twoSum {
     }
 
     public int[] twoSum2(int[] nums, int target) {
-        HashMap<Integer, Integer> map = new HashMap();
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 
         for(int i = 0; i < nums.length; i++) {
             int diff = target - nums[i];
