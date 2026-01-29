@@ -2,11 +2,11 @@ package codingProblems;
 
 public class maxArea {
     public static void main (String[] args) { 
-        // System.out.println(maxAreaSolution(new int[]{1,7,2,5,4,7,3,6}));
-        // System.out.println(maxAreaSolution(new int[]{2,2,2}));
+        System.out.println(maxAreaSolution(new int[]{1,7,2,5,4,7,3,6}));
+        System.out.println(maxAreaSolution(new int[]{2,2,2}));
 
-        System.out.println(maxAreaBadSolution(new int[]{1,7,2,5,4,7,3,6}));
-        System.out.println(maxAreaBadSolution(new int[]{2,2,2}));
+        // System.out.println(maxAreaBadSolution(new int[]{1,7,2,5,4,7,3,6}));
+        // System.out.println(maxAreaBadSolution(new int[]{2,2,2}));
     }
 
     public static int maxAreaSolution(int[] heights) {
@@ -19,6 +19,13 @@ public class maxArea {
             int yAxis = heights[i] <= heights[j] ? heights[i] : heights[j];
             int area = xAxis * yAxis;
 
+            max = Math.max(max, area);
+
+            if(heights[i] > heights[j]) {
+                j--;
+            } else {
+                i++;
+            } 
         }
 
         return max;
@@ -35,6 +42,7 @@ public class maxArea {
                 int area = xAxis * yAxis;
 
                 max = Math.max(max, area);
+
             }
         }
 
