@@ -1,11 +1,11 @@
-package codingProblems;
+package codingProblems.TwoPointers;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class twoSum {
+public class twoSumPointers {
     public static void main (String[] args) { 
         // Basic Case
         System.out.println(twoSumSolution(List.of(2,7,11,15), 9));

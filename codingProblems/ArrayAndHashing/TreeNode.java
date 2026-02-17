@@ -1,4 +1,4 @@
-package codingProblems.CustomDataStructures;
+package codingProblems.ArrayAndHashing;
 
 public class TreeNode {
     public int val;

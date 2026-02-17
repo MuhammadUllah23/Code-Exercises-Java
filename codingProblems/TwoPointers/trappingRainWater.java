@@ -1,4 +1,4 @@
-package codingProblems;
+package codingProblems.TwoPointers;
 
 public class trappingRainWater {
     public static void main (String[] args) { 

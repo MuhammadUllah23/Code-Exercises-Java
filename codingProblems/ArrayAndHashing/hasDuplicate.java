@@ -1,4 +1,4 @@
-package codingProblems;
+package codingProblems.ArrayAndHashing;
 
 import java.util.HashSet;
 import java.util.Set;
