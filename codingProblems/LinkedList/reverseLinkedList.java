@@ -1,7 +1,6 @@
 package codingProblems.LinkedList;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Stack;
 
 import codingProblems.CustomDataStructures.ListNode;
