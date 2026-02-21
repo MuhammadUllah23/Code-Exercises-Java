@@ -16,12 +16,11 @@ public class validParenthesis {
     public static Boolean isValid(String s) {
         
         Stack<String> stack = new Stack<>();
-        List<String> open = List.of("(", "{", "[");
         Map<String, String> map = Map.of("(", ")", "{", "}", "[", "]");
         
         for(char c : s.toCharArray()) {
             String curr = String.valueOf(c);
-            if (open.contains(curr)) {
+            if (map.containsKey(curr)) {
                 stack.push(curr);
             } else {
                 if (stack.isEmpty()) return false;
