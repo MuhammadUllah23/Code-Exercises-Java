@@ -1,9 +1,5 @@
 package codingProblems.ArrayAndHashing;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 public class validSudoku {
     public static void main (String[] args) { 
 
@@ -105,27 +101,27 @@ public class validSudoku {
             }
         }
         // Check Boxes
-        for (int box= 0; box < 9; box += 3) {
-            int boxStartingRow = 3 * (box % 3);
-            int boxStartingCol = box - (box % 3);
+        for (int boxRow = 0; boxRow < 9; boxRow += 3) {
+            for (int boxCol = 0; boxCol < 9; boxCol += 3) {
 
-            boolean[] seen = new boolean[9];
+                boolean[] seen = new boolean[9];
 
-            for (int r = boxStartingRow; r < boxStartingRow + 3; r++) {
-                for (int c = boxStartingCol; c < boxStartingCol + 3; c++) {
-                    char ch = board[r][c];
-                    if (ch == '.') continue;
+                for (int r = boxRow; r < boxRow + 3; r++) {
+                    for (int c = boxCol; c < boxCol + 3; c++) {
 
-                    int index = ch - '1';
+                        char ch = board[r][c];
+                        if (ch == '.') continue;
 
-                    if (seen[index]) {
-                        return false;  
+                        int index = ch - '1';
+
+                        if (seen[index]) {
+                            return false;
+                        }
+
+                        seen[index] = true;
                     }
-
-                    seen[index] = true;
                 }
             }
-            
         }
 
         return true;
