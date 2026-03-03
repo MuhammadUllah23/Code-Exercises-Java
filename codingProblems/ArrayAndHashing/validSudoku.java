@@ -75,23 +75,33 @@ public class validSudoku {
         for (int i = 0; i < board.length; i++) {
 
             // Check Columns
-            Set<Character> columnSet = new HashSet<Character>();
+            boolean[] columnSeen = new boolean[9];
             for (int j = 0; j < board.length; j++) {
-                char element = board[j][i];
-                if (element == '.') continue;
-                if (!columnSet.add(element)) {
-                    return false;
+                char ch = board[j][i];
+                if (ch == '.') continue;
+
+                int index = ch - '1';
+
+                if (columnSeen[index]) {
+                    return false;  
                 }
+
+                columnSeen[index] = true;
             }
 
             // Check Rows
-            Set<Character> rowSet = new HashSet<Character>();
+            boolean[] rowSeen = new boolean[9];
             for (int j = 0; j < board.length; j++) {
-                char element = board[i][j];
-                if (element == '.') continue;
-                if (!rowSet.add(element)) {
-                    return false;
+                char ch = board[i][j];
+                if (ch == '.') continue;
+
+                int index = ch - '1';
+
+                if (rowSeen[index]) {
+                    return false;  
                 }
+
+                rowSeen[index] = true;
             }
         }
         // Check Boxes
