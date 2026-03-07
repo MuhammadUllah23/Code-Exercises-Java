@@ -1,4 +1,4 @@
-package codingProblems;
+package codingProblems.BinaryTrees;
 
 import java.util.ArrayList;
 import java.util.List;
