@@ -17,8 +17,8 @@ public class DailyTemperatures {
 
         // iterate through temperatures
         for (int i = 0; i < temperatures.length; i++) {
-            // if temperature[i] > temperatures[stack.peek] then set result[stack.pop] = temperature[i] > temperatures[stack.peek]
-            if(!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]) {
+            // while temperature[i] > temperatures[stack.peek] then set result[stack.pop] = temperature[i] > temperatures[stack.peek]
+            while(!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]) {
                 int j = stack.pop();
                 result[j] = i - j;
             }
